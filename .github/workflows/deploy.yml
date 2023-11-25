@@ -33,4 +33,4 @@ jobs:
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npx gh-pages -d build -t true -u "github-pages-bot <github-pages-bot@rizkani.com>"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}%
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
