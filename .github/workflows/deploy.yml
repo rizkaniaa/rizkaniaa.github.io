@@ -12,25 +12,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
  
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
- 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
  
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
  
       - name: Build
         env:
           BASE_PATH: '/rizkaniaa.github.io'
         run: |
-          pnpm run build
+          npm run build
           echo 'rizkaniaa.github.io' > ./build/CNAME
  
       - name: Deploy
